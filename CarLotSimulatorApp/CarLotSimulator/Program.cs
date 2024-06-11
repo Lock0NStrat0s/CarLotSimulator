@@ -20,10 +20,9 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            //METHOD 1: Using the default constructor
             Car car1 = new Car()
             { 
-                EngineNoise = "Vroom", 
-                HonkNoise = "Beep", 
                 IsDriveable = true, 
                 Make = "Toyota", 
                 Model = "Corolla", 
@@ -31,16 +30,16 @@ namespace CarLotSimulator
             };
             carLot.Cars.Add(car1);
 
+            //METHOD 2: Using the dot notation to set the properties
             Car car2 = new Car();
             car2.Year = 2010;
             car2.Make = "Ford";
             car2.Model = "F150";
-            car2.EngineNoise = "Vroom";
-            car2.HonkNoise = "Beep";
             car2.IsDriveable = true;
             carLot.Cars.Add(car2);
 
-            Car car3 = new Car(2024, "Chevy", "Camaro", "Vroom", "Beep", true);
+            //METHOD 3: Using the overloaded constructor
+            Car car3 = new Car(2024, "Chevy", "Camaro", true);
             carLot.Cars.Add(car3);
 
             car1.MakeEngineNoise("VROOOOOOOOM");
