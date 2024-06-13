@@ -14,7 +14,7 @@ namespace CarLotSimulator
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
-
+            Console.WriteLine($"NUMBER OF CARS IN THE LOT: {CarLot.numberOfCars}");
 
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
@@ -29,6 +29,8 @@ namespace CarLotSimulator
                 Year = 2000
             };
             carLot.Cars.Add(car1);
+            CarLot.numberOfCars++;
+            Console.WriteLine($"NUMBER OF CARS IN THE LOT: {CarLot.numberOfCars}");
 
             //METHOD 2: Using the dot notation to set the properties
             Car car2 = new Car();
@@ -37,10 +39,14 @@ namespace CarLotSimulator
             car2.Model = "F150";
             car2.IsDriveable = true;
             carLot.Cars.Add(car2);
+            CarLot.numberOfCars++;
+            Console.WriteLine($"NUMBER OF CARS IN THE LOT: {CarLot.numberOfCars}");
 
             //METHOD 3: Using the overloaded constructor
             Car car3 = new Car(2024, "Chevy", "Camaro", true);
             carLot.Cars.Add(car3);
+            CarLot.numberOfCars++;
+            Console.WriteLine($"NUMBER OF CARS IN THE LOT: {CarLot.numberOfCars}");
 
             car1.MakeEngineNoise("VROOOOOOOOM");
             car1.MakeHonkNoise("QUAAAAAAACK");
